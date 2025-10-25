@@ -5,39 +5,26 @@
     <groupId>org.example</groupId>
     <artifactId>testing</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Archetype - testing</name>
+    <name>testing</name>
     <url>http://maven.apache.org</url>
+
     <repositories>
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
     </repositories>
+
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <selenium.version>4.31.0</selenium.version>
-        <appium.version>9.4.0</appium.version>
-        <slack.version>1.38.2</slack.version>
         <testng.version>7.9.0</testng.version>
-        <jfree.version>1.0.19</jfree.version>
         <rest-assured.version>5.5.1</rest-assured.version>
-        <apache-poi.version>5.4.1</apache-poi.version>
         <slf4j.version>2.0.12</slf4j.version>
         <logback.version>1.5.13</logback.version>
-        <jacoco.version>0.8.11</jacoco.version>
         <suiteXmlFile>masterTestSuite.xml</suiteXmlFile>
-        <appium.flutterfinder.version>1.0.9</appium.flutterfinder.version>
-        <json.version>20231013</json.version>
-        <lombok.version>1.18.30</lombok.version>
-        <commons.io.version>2.14.0</commons.io.version>
-        <exec.maven.plugin.version>3.1.0</exec.maven.plugin.version>
-        <surefire.api.version>3.2.5</surefire.api.version>
-        <jakarta.mail.version>2.1.3</jakarta.mail.version>
-        <angus.mail.version>2.0.3</angus.mail.version>
-        <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
-        <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
     </properties>
 
     <dependencies>
@@ -46,72 +33,19 @@
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>${appium.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.slack.api</groupId>
-            <artifactId>slack-api-client</artifactId>
-            <version>${slack.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.ashwithpoojary98</groupId>
-            <artifactId>appium_flutterfinder_java</artifactId>
-            <version>${appium.flutterfinder.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jfree</groupId>
-            <artifactId>jfreechart</artifactId>
-            <version>${jfree.version}</version>
-        </dependency>
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
         </dependency>
+
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>${rest-assured.version}</version>
         </dependency>
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>json-schema-validator</artifactId>
-            <version>${rest-assured.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.angus</groupId>
-            <artifactId>angus-mail</artifactId>
-            <version>2.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>javax.mail</artifactId>
-            <version>1.6.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20231013</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>${apache-poi.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>${apache-poi.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.30</version>
-            <scope>provided</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -122,30 +56,12 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.14.0</version>
-        </dependency>
 
-        <dependency>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <version>3.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.surefire</groupId>
-            <artifactId>surefire-api</artifactId>
-            <version>3.2.5</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.9.2</version>
         </dependency>
-
-
     </dependencies>
 
     <build>
@@ -156,13 +72,6 @@
                 <version>3.11.0</version>
                 <configuration>
                     <release>21</release>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>1.18.30</version>
-                        </path>
-                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
             <plugin>
@@ -173,22 +82,7 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
-                    <argLine>
-                        -Djacoco.skip=true
-                    </argLine>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
