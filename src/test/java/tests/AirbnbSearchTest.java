@@ -3,8 +3,8 @@ package tests;
 import base.Base;
 import pages.AirbnbSearchPage;
 import pages.ResultsPage;
-import static base.Base.closeBrowser;
-import static base.Base.switchToNewTab;
+
+import static base.Base.*;
 
 public class AirbnbSearchTest {
 
@@ -21,7 +21,7 @@ public class AirbnbSearchTest {
         resultsPage.selectBedCount();
         switchToNewTab();
         resultsPage.checkResults();
-
+        driver.quit();
 
     }
 }
