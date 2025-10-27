@@ -8,8 +8,8 @@ public class AirbnbSearchPage extends Base {
 
     private By searchBox = By.name("query");
     private By guestsButton = By.xpath("//div[text()='Add guests']");
-    private By checkInDate = By.xpath("//button[@data-state--date-string='2025-10-26']");
-    private By checkOutDate = By.xpath("//button[@data-state--date-string='2025-11-02']");
+    private By checkInDate = By.xpath("//button[@data-state--date-string='2025-10-29']");
+    private By checkOutDate = By.xpath("//button[@data-state--date-string='2025-11-05']");
     private By adultsCount = By.xpath("//button[@data-testid='stepper-adults-increase-button' and @type='button']");
     private By childsCount = By.xpath("//button[@data-testid='stepper-children-increase-button' and @type='button']");
     private By serchButton = By.xpath("//div[contains(@class,'s15knsuf') and text()='Search']");
